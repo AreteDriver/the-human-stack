@@ -4,9 +4,12 @@
 
 **Level:** E1
 **Confidence:** Low
+**Scope:** Narrow
 **Status:** Draft
 **Version:** 1.0
 **Last Review:** 2026-07-07
+**Review Trigger:** Second observation of implicit queue behavior in different agent system
+**Expected Upgrade:** E2
 **Owner:** @AreteDriver
 
 ---

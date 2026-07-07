@@ -4,9 +4,12 @@
 
 **Level:** E1
 **Confidence:** Medium
+**Scope:** Broad
 **Status:** Draft
 **Version:** 1.0
 **Last Review:** 2026-07-07
+**Review Trigger:** Systematic measurement across 20+ AI deployments in diverse contexts
+**Expected Upgrade:** E4
 **Owner:** @AreteDriver
 
 ---

@@ -4,9 +4,12 @@
 
 **Level:** E3
 **Confidence:** Medium
+**Scope:** Moderate
 **Status:** Stable
 **Version:** 1.0
 **Last Review:** 2026-07-07
+**Review Trigger:** Cloud inference validation (OpenAI, Anthropic APIs)
+**Expected Upgrade:** E4
 **Owner:** @AreteDriver
 
 ---

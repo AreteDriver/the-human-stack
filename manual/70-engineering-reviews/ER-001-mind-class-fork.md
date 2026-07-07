@@ -4,9 +4,12 @@
 
 **Level:** E4
 **Confidence:** High
+**Scope:** Moderate
 **Status:** Stable
 **Version:** 1.0
 **Last Review:** 2026-07-07
+**Review Trigger:** Third experiment using "prototype in main" pattern
+**Expected Upgrade:** E5
 **Owner:** @AreteDriver
 
 ---

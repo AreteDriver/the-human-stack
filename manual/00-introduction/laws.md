@@ -3,10 +3,13 @@
 ## Evidence
 
 **Level:** E1
-**Confidence:** Medium
+**Confidence:** High
+**Scope:** Broad
 **Status:** Draft
-**Version:** 1.0
+**Version:** 1.1
 **Last Review:** 2026-07-07
+**Review Trigger:** Systematic measurement across 20+ AI deployments
+**Expected Upgrade:** E4
 **Owner:** @AreteDriver
 
 ---
@@ -17,7 +20,7 @@ These laws are not universal truths. They are design heuristics that emerge from
 
 ## Law 1
 
-### Every AI system eventually becomes an operational system.
+### Every AI system that creates sustained value must eventually be operated as an operational system.
 
 A model deployed once is an experiment. A model deployed continuously, with users depending on it, with drift to monitor, with failures to respond to — that is an operational system. The transition happens regardless of whether you planned for it.
 
@@ -114,6 +117,24 @@ An AI system without memory of its past decisions, failures, and tradeoffs canno
 - Are there additional laws? (Hypothesis: at least 2 more related to governance and human oversight)
 - Can Law 1 be falsified? What would constitute evidence that an AI system *did not* become operational?
 - Do these laws apply to non-AI operational systems? (Lean manufacturing, SRE) Or are they specific to the probabilistic nature of AI?
+- At what scale does the "operational systems" lens become less useful — e.g., for a single-person prototype?
+
+## Citation
+
+```bibtex
+@misc{humanstack-laws-2026,
+  title = {The Laws of Operational AI},
+  author = {Young, James C.},
+  year = {2026},
+  month = {July},
+  version = {1.1},
+  evidence = {E1},
+  scope = {Broad},
+  confidence = {High},
+  howpublished = {The Human Stack},
+  url = {https://github.com/AreteDriver/the-human-stack/blob/main/manual/00-introduction/laws.md}
+}
+```
 
 ## References
 
@@ -127,4 +148,5 @@ An AI system without memory of its past decisions, failures, and tradeoffs canno
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1 | 2026-07-07 | Revised Law 1 to survive counterexamples; added Scope to evidence block; added Review Trigger and Expected Upgrade |
 | 1.0 | 2026-07-07 | Initial laws and corollaries |

@@ -1,18 +1,21 @@
 # Evidence Framework
 
-This document defines how The Human Stack grades claims. It is applied to every chapter, case study, benchmark, and engineering review.
+This document defines how The Human Stack grades claims. It is applied to every artifact: laws, corollaries, chapters, case studies, benchmarks, patterns, and reviews.
 
 ## Core Principle
 
-**Evidence and confidence are separate axes.**
+**Evidence, confidence, and scope are three separate axes.**
 
-Something can be:
+| Axis | Question |
+|------|----------|
+| **Evidence** | How much empirical support exists? |
+| **Confidence** | How strongly do we currently believe it? |
+| **Scope** | How broadly do we think it applies? |
 
-- **High evidence, low confidence** — We measured it extensively, but conflicting results exist.
-- **Low evidence, high confidence** — We have strong theoretical reasons, but limited empirical validation.
-- **High evidence, high confidence** — The gold standard.
-
-Separating these prevents the common failure mode of conflating "we tested this" with "we are certain this is correct."
+Separating these prevents the common failure modes of:
+- Conflating "we tested this" with "we are certain this is correct"
+- Conflating "we believe this strongly" with "this applies everywhere"
+- Hiding uncertainty by upgrading evidence levels to match intuition
 
 ---
 
@@ -21,7 +24,7 @@ Separating these prevents the common failure mode of conflating "we tested this"
 | Level | Name | Meaning |
 |-------|------|---------|
 | **E0** | Question | No recommendation. Pure speculation. |
-| **E1** | Hypothesis | Reasoned design. Plausible, but untested. |
+| **E1** | Hypothesis | Reasoned design or observation. Plausible, but untested or limited evidence. |
 | **E2** | Prototype | Demonstrated in controlled conditions. Works on the author's machine. |
 | **E3** | Benchmarked | Measured. Repeatable under defined conditions. |
 | **E4** | Production | Observed under real workloads. Not synthetic. |
@@ -29,8 +32,8 @@ Separating these prevents the common failure mode of conflating "we tested this"
 
 ### Examples
 
-| Claim | Evidence Level | Explanation |
-|-------|---------------|-------------|
+| Claim | Evidence | Explanation |
+|-------|----------|-------------|
 | "We believe active inference is the right architecture for intent resolution." | E1 | Reasoned design, no empirical validation yet. |
 | "drift-monitor detects 87% of prompt regressions in our test suite." | E3 | Benchmarked, repeatable, but only under our conditions. |
 | "Animus P5 Discovery reduced tool integration time from 3 days to 20 minutes across 5 production deployments." | E4 | Observed under real workloads, but not yet externally reproduced. |
@@ -66,20 +69,60 @@ Confidence: Low
 
 ---
 
+## Scope
+
+| Level | Meaning |
+|-------|---------|
+| **Narrow** | Applies to a specific system, team, or context. |
+| **Moderate** | Applies to a class of systems or organizations with similar constraints. |
+| **Broad** | Applies to AI systems generally, with stated boundary conditions. |
+
+### Example
+
+```
+Law 1: "Every AI system that creates sustained value must eventually be
+        operated as an operational system."
+Evidence: E1
+Confidence: High
+Scope: Broad
+→ "We have strong engineering intuition from operational systems work,
+   but have not yet systematically measured this across dozens of AI deployments.
+   The scope is broad, but the evidence is thin."
+```
+
+---
+
 ## Chapter Evidence Block
 
-Every chapter in the manual must include this block at the top:
+Every chapter, law, and artifact in the manual must include this block at the top:
 
 ```markdown
 ## Evidence
 
 **Level:** E3
 **Confidence:** Medium
+**Scope:** Moderate
 **Status:** Stable
 **Version:** 1.2
 **Last Review:** 2026-07-07
+**Review Trigger:** Independent reproduction
+**Expected Upgrade:** E4
 **Owner:** @AreteDriver
 ```
+
+### Field Definitions
+
+| Field | Meaning |
+|-------|---------|
+| **Level** | Current evidence level (E0–E5) |
+| **Confidence** | Current confidence (Low / Medium / High) |
+| **Scope** | How broadly this applies (Narrow / Moderate / Broad) |
+| **Status** | Draft / Stable / Archived / Superseded |
+| **Version** | Manual version of this artifact |
+| **Last Review** | Date of last evidence review |
+| **Review Trigger** | What event would trigger a re-review? |
+| **Expected Upgrade** | What evidence would justify a higher level? |
+| **Owner** | Person responsible for accuracy |
 
 ### Status Definitions
 
@@ -87,7 +130,8 @@ Every chapter in the manual must include this block at the top:
 |--------|---------|
 | **Draft** | Initial version. Under review. Subject to significant change. |
 | **Stable** | Reviewed. Evidence verified. Minor corrections expected. |
-| **Archived** | Superseded by newer chapter. Retained for historical context. |
+| **Archived** | Retained for historical context. No longer maintained. |
+| **Superseded** | Replaced by a newer artifact. Link to successor. |
 
 ### Re-review Requirements
 
@@ -97,11 +141,11 @@ Every chapter in the manual must include this block at the top:
 | E2–E3 | Every 6 months |
 | E4–E5 | Every 12 months |
 
-If evidence degrades (e.g., E3 findings are contradicted by new data), the chapter must be updated or downgraded.
+If evidence degrades (e.g., E3 findings are contradicted by new data), the artifact must be updated or downgraded. **Public downgrades are a feature, not a bug.**
 
 ---
 
-## Upgrading Evidence
+## Upgrading and Downgrading Evidence
 
 Evidence levels do not increase automatically. They require:
 
@@ -110,7 +154,28 @@ Evidence levels do not increase automatically. They require:
 - **E3 → E4:** Production deployment with observed metrics.
 - **E4 → E5:** External reproduction documented by at least one independent party.
 
-Each upgrade must be recorded in the chapter's version history.
+Downgrades happen when:
+- New data contradicts prior evidence
+- Conditions change, invalidating prior measurements
+- Scope is discovered to be narrower than originally claimed
+
+Each change must be recorded in the artifact's version history with rationale.
+
+---
+
+## Evidence Levels by Artifact Type
+
+| Artifact | Typical Starting Level | Typical Target Level |
+|----------|----------------------|---------------------|
+| Law | E1 | E4 |
+| Corollary | E2 | E4 |
+| Pattern | E2 | E3 |
+| Runbook | E3 | E4 |
+| Benchmark | E3 | E4 |
+| Engineering Review | E3 | E4 |
+| Case Study | E3 | E4 |
+| Hypothesis | E0 | E2 |
+| Field Note | E1 | E2 |
 
 ---
 
@@ -131,9 +196,12 @@ Use drift-monitor for all production deployments.
 
 **Level:** E3
 **Confidence:** Medium
+**Scope:** Moderate
 **Status:** Stable
 **Version:** 1.0
 **Last Review:** 2026-07-07
+**Review Trigger:** Multi-tenant production validation
+**Expected Upgrade:** E4
 **Owner:** @AreteDriver
 
 ### Benchmark
@@ -155,8 +223,14 @@ not yet measured.
 
 ## The Evidence Framework Is Itself Evidence-Graded
 
-| Attribute | Level |
-|-----------|-------|
-| This framework | E3 |
-| Confidence | Medium |
-| Rationale | Used across all chapters in this manual. Not yet independently reproduced. |
+| Attribute | Level | Confidence | Scope |
+|-----------|-------|------------|-------|
+| This framework | E3 | Medium | Moderate |
+| Rationale | Used across all artifacts in this manual. Not yet independently reproduced. Under active refinement. | | |
+
+## Revision History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.1 | 2026-07-07 | Added Scope axis, Review Trigger, Expected Upgrade, downgrade rules, artifact-type table |
+| 1.0 | 2026-07-07 | Initial framework |

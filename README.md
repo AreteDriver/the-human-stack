@@ -43,9 +43,16 @@ The Human Stack is a living engineering reference for deploying, operating, and 
 | Benchmarked claims (E3) | 4 | Increasing |
 | Production case studies (E4) | 3 | Increasing |
 | Independent reproductions (E5) | 0 | Increasing |
-| Retired hypotheses | 0 | Increasing |
+| Retired or superseded claims | 0 | Increasing |
 
 *We optimize for validated knowledge, not volume.*
+
+**Evidence is graded on three axes:**
+- **Evidence Level** (E0–E5): How much empirical support exists?
+- **Confidence** (Low/Medium/High): How strongly do we currently believe it?
+- **Scope** (Narrow/Moderate/Broad): How broadly do we think it applies?
+
+Claims can be downgraded as well as upgraded. Public downgrades are a feature, not a bug.
 
 ## Version
 
