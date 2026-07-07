@@ -35,6 +35,18 @@ The Human Stack is a living engineering reference for deploying, operating, and 
 - **Hiring managers evaluating senior engineers:** Start with [manual/70-engineering-reviews/](manual/70-engineering-reviews/).
 - **Researchers:** Start with [manual/80-research/](manual/80-research/).
 
+## Dashboard: Validated Knowledge
+
+| Metric | Current | Target |
+|--------|---------|--------|
+| Hypotheses (E0–E1) | 3 | ≤ 20 |
+| Benchmarked claims (E3) | 4 | Increasing |
+| Production case studies (E4) | 3 | Increasing |
+| Independent reproductions (E5) | 0 | Increasing |
+| Retired hypotheses | 0 | Increasing |
+
+*We optimize for validated knowledge, not volume.*
+
 ## Version
 
 **The Human Stack v0.8** — July 2026

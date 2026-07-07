@@ -175,11 +175,33 @@ To reproduce this calibration:
 2. **Rubric drift:** Scorers apply rubrics inconsistently over time. Mitigation: Reference solutions and periodic inter-rater reliability checks.
 3. **Suite bias:** Tasks may favor certain model architectures. Mitigation: Diverse task sources and regular suite review.
 
+## Open Questions
+
+- Does the four-dimensional evaluation (correctness, precision, efficiency, evidence quality) generalize to all AI system types, or are there dimensions missing for specific domains (e.g., safety-critical systems)?
+- At what evidence level (E3 vs E4) do benchmark results become sufficient for enterprise procurement decisions?
+- Can the failure taxonomy be reduced to a smaller set of orthogonal classifiers without losing predictive power?
+- What is the optimal recalibration frequency? Weekly may be too frequent for stable models; monthly may miss rapid drift.
+
 ## Future Work
 
 - **E4 target:** Validate methodology against cloud inference (OpenAI, Anthropic APIs) with identical suites
 - **E4 target:** Correlate benchmark scores with production outcomes (adoption rates, error reports)
 - **E5 target:** Independent reproduction by another team using published methodology
+
+## Citation
+
+```bibtex
+@misc{humanstack-benchmark-2026,
+  title = {Benchmark Methodology for AI System Evaluation},
+  author = {Young, James C.},
+  year = {2026},
+  month = {July},
+  version = {1.0},
+  evidence = {E3},
+  howpublished = {The Human Stack},
+  url = {https://github.com/AreteDriver/the-human-stack/blob/main/manual/20-evaluation/benchmark-methodology.md}
+}
+```
 
 ## References
 

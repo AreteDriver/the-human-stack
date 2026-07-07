@@ -67,10 +67,31 @@ Key changes during upstreaming:
 1. **Connection pool exhaustion:** Under high concurrency, unbounded connections could overwhelm PostgreSQL. Mitigation: Configurable pool limits with backpressure.
 2. **Migration failure:** SQLite → PostgreSQL migration may fail on corrupted source data. Mitigation: Dry-run mode and rollback capability.
 
+## Open Questions
+
+- Is PostgreSQL the right long-term backend, or should the abstraction support multiple backends (e.g., CockroachDB, Yugabyte)?
+- At what checkpoint frequency does write amplification become problematic?
+- Should bitemporal semantics be reintroduced for compliance use cases (e.g., financial audit trails)?
+
 ## Future Work
 
 - **E4 target:** Validate with remote PostgreSQL and replication
 - **E5 target:** Community adoption in multi-node deployments
+
+## Citation
+
+```bibtex
+@misc{humanstack-cs002-2026,
+  title = {Case Study #002: Upstreaming DurableObjectStore},
+  author = {Young, James C.},
+  year = {2026},
+  month = {July},
+  version = {1.0},
+  evidence = {E4},
+  howpublished = {The Human Stack},
+  url = {https://github.com/AreteDriver/the-human-stack/blob/main/manual/10-case-studies/CS-002-durable-object-store.md}
+}
+```
 
 ## References
 

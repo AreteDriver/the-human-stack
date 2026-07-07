@@ -80,11 +80,32 @@ Key technical decisions:
 2. **Validator bypass:** The 4-dimension validator checks structure, not behavior. A tool with valid schema but runtime exceptions would still register.
 3. **Daemon deadlock:** If the daemon crashes during discovery, orphaned scan tasks may accumulate. Mitigation: PID singleton and signal-safe shutdown (P3).
 
+## Open Questions
+
+- Does automated discovery reduce or increase the risk of supply-chain attacks? (If tools are auto-discovered from external sources, validation becomes critical.)
+- At what scale does hash deduplication become a bottleneck?
+- Should discovery be opt-in (explicit registration) or opt-out (automatic with blocklist) for enterprise deployments?
+
 ## Future Work
 
 - **E4 target:** Validate discovery under multi-tenant production workloads
 - **E5 target:** External reproduction by third-party Animus deployments
 - **Known unknown:** Performance of hash deduplication at 10,000+ tool scale
+
+## Citation
+
+```bibtex
+@misc{humanstack-cs001-2026,
+  title = {Case Study #001: Animus P5 Discovery},
+  author = {Young, James C.},
+  year = {2026},
+  month = {July},
+  version = {1.0},
+  evidence = {E3},
+  howpublished = {The Human Stack},
+  url = {https://github.com/AreteDriver/the-human-stack/blob/main/manual/10-case-studies/CS-001-animus-p5-discovery.md}
+}
+```
 
 ## References
 

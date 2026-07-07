@@ -66,10 +66,31 @@ Upstream `PolicyDecisionPoint` + `CapabilityGrantStore` into v2.3 as a centraliz
 2. **Performance degradation:** Rule evaluation adds latency to every tool call. Mitigation: Cached decisions with TTL.
 3. **Audit log exhaustion:** High-frequency tool calls generate massive audit logs. Mitigation: Sampling and log rotation.
 
+## Open Questions
+
+- Does default-deny authorization create unacceptable friction for rapid prototyping? If so, is there a safe "training wheels" mode?
+- Can capability-based access control scale to thousands of citizens and tools without policy bloat?
+- Should policy decisions be cached (for performance) or evaluated every time (for freshness)?
+
 ## Future Work
 
 - **E4 target:** Validate under real-world multi-tenant deployment
 - **E5 target:** Independent security audit by third party
+
+## Citation
+
+```bibtex
+@misc{humanstack-cs003-2026,
+  title = {Case Study #003: Upstreaming PolicyDecisionPoint},
+  author = {Young, James C.},
+  year = {2026},
+  month = {July},
+  version = {1.0},
+  evidence = {E4},
+  howpublished = {The Human Stack},
+  url = {https://github.com/AreteDriver/the-human-stack/blob/main/manual/10-case-studies/CS-003-policy-decision-point.md}
+}
+```
 
 ## References
 

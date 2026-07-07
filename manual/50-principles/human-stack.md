@@ -71,11 +71,33 @@ AI systems amplify human capability. They do not replace human judgment in uncer
 - **Sacrificed:** Velocity in early stages. Operational systems require more upfront design and instrumentation.
 - **Risk:** Over-engineering. Not every AI deployment needs hospital-grade governance. The principle must be applied proportionally to the consequences of failure.
 
+## Open Questions
+
+- Is "AI systems should be engineered as operational systems" falsifiable? What evidence would disprove it?
+- Do Lean/TPS principles transfer directly to AI systems, or are there fundamental incompatibilities (e.g., deterministic standard work vs. probabilistic model behavior)?
+- At what organizational scale does the "operational systems" lens become more or less useful?
+- Are there domains where treating AI as software (not operations) is actually the correct approach?
+
 ## Future Work
 
 - Validate this philosophy through case studies across different organizational contexts (startup, enterprise, regulated industry)
 - Develop a maturity model for operational AI adoption
 - Identify failure modes specific to "operationalizing" AI that do not apply to traditional software
+
+## Citation
+
+```bibtex
+@misc{humanstack-philosophy-2026,
+  title = {The Human Stack Philosophy},
+  author = {Young, James C.},
+  year = {2026},
+  month = {July},
+  version = {1.0},
+  evidence = {E1},
+  howpublished = {The Human Stack},
+  url = {https://github.com/AreteDriver/the-human-stack/blob/main/manual/50-principles/human-stack.md}
+}
+```
 
 ## References
 

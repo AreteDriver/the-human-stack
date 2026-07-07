@@ -81,9 +81,30 @@ Six months later, the recommendation reversed:
 2. **Set explicit kill criteria** before starting: "If X modules are not complete by Y date, archive."
 3. **Upstream or archive within 3 months.** No concept should linger in limbo.
 
+## Open Questions
+
+- Would a 3-month time limit have been too aggressive for the DurableObjectStore upstreaming? (Actual time was ~6 months.)
+- Are there conditions where long-lived forks are actually preferable (e.g., security isolation, regulatory separation)?
+- How should organizations with multiple teams decide between "prototype in main" vs. "fork and prove"?
+
 ## Evidence Level
 
 This recommendation is based on direct experience with the fork and its subsequent upstreaming. The pattern of "fork → prove → upstream or archive" has been applied to two subsequent experiments with better results.
+
+## Citation
+
+```bibtex
+@misc{humanstack-er001-2026,
+  title = {Engineering Review #001: Mind-Class Fork},
+  author = {Young, James C.},
+  year = {2026},
+  month = {July},
+  version = {1.0},
+  evidence = {E4},
+  howpublished = {The Human Stack},
+  url = {https://github.com/AreteDriver/the-human-stack/blob/main/manual/70-engineering-reviews/ER-001-mind-class-fork.md}
+}
+```
 
 ## References
 
