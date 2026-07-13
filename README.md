@@ -40,10 +40,10 @@ The Human Stack is a living engineering reference for deploying, operating, and 
 | Metric | Current | Target |
 |--------|---------|--------|
 | Hypotheses (E0–E1) | 3 | ≤ 20 |
-| Benchmarked claims (E3) | 4 | Increasing |
-| Production case studies (E4) | 3 | Increasing |
+| Benchmarked claims (E3) | 13 | Increasing |
+| Production case studies (E4) | 6 | Increasing |
 | Independent reproductions (E5) | 0 | Increasing |
-| Retired or superseded claims | 0 | Increasing |
+| Retired or superseded claims | 1 | Increasing |
 
 *We optimize for validated knowledge, not volume.*
 
@@ -56,10 +56,10 @@ Claims can be downgraded as well as upgraded. Public downgrades are a feature, n
 
 ## Version
 
-**The Human Stack v0.8** — July 2026
+**The Human Stack v0.9** — July 2026
 
 See [ROADMAP.md](ROADMAP.md) for planned revisions.
 
 ---
 
-*Last updated: 2026-07-07*
+*Last updated: 2026-07-12*

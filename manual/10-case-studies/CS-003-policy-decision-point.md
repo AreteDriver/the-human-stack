@@ -99,7 +99,7 @@ Upstream `PolicyDecisionPoint` + `CapabilityGrantStore` into v2.3 as a centraliz
 
 - [ER-001: Mind-Class Fork](../70-engineering-reviews/ER-001-mind-class-fork.md)
 - [Animus P3 Daemon](../30-operations/animus-p3-daemon.md)
-- [Capability-Based Access Control Pattern](../40-architecture/capability-based-access-control.md)
+- [Kernel-Head-Citizen Architecture](../40-architecture/kernel-head-citizen.md) — Security layer context
 
 ## Revision History
 

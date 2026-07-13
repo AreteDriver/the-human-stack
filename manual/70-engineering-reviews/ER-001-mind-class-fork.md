@@ -113,7 +113,7 @@ This recommendation is based on direct experience with the fork and its subseque
 
 - [CS-002: Upstreaming DurableObjectStore](../10-case-studies/CS-002-durable-object-store.md)
 - [CS-003: Upstreaming PolicyDecisionPoint](../10-case-studies/CS-003-policy-decision-point.md)
-- [80-research: Active Inference](../80-research/active-inference.md)
+- [FN-004: Prototype in Main](../80-research/field-notes/FN-004-prototype-in-main.md) — Active inference archived as research note
 
 ## Revision History
 

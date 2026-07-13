@@ -44,12 +44,13 @@ The Human Stack is not a book to read cover-to-cover. It is a reference to retur
 | Section | Chapters | Evidence Target | Status |
 |---------|----------|-----------------|--------|
 | 00-introduction | 2 | E1–E2 | Draft |
-| 10-case-studies | 3 | E3–E4 | Draft |
-| 20-evaluation | 1 | E3 | Draft |
-| 30-operations | 0 | — | Empty |
-| 40-architecture | 0 | — | Empty |
-| 50-principles | 1 | E1 | Draft |
-| 70-engineering-reviews | 1 | E4 | Draft |
-| 80-research | 1 | E1 | Draft |
+| 10-case-studies | 4 | E3–E4 | Draft |
+| 20-evaluation | 2 | E3 | Draft |
+| 30-operations | 6 | E2–E3 | Draft |
+| 40-architecture | 3 | E3–E4 | Draft |
+| 50-principles | 2 | E1–E2 | Draft |
+| 60-failed-experiments | 1 | E4 | Draft |
+| 70-engineering-reviews | 2 | E4 | Draft |
+| 80-research | 6 | E1–E3 | Draft |
 
-*Last updated: 2026-07-07*
+*Last updated: 2026-07-12*
