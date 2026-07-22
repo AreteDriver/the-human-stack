@@ -153,7 +153,7 @@ This recommendation is based on direct implementation experience with Gorgon and
 
 - [CS-001: Animus P5 Discovery](../10-case-studies/CS-001-animus-p5-discovery.md)
 - [ER-001: Mind-Class Fork](../70-engineering-reviews/ER-001-mind-class-fork.md)
-- [Animus Architecture Book v3.0](https://github.com/AreteDriver/notes/topics/animus-architecture-book/)
+- Animus Architecture Book v3.0 — private reference (notes repo)
 - Animus self-improve deep dive: `animus/docs/reviews/2026-02-21-self-improve-deep-dive.md`
 
 ## Revision History
