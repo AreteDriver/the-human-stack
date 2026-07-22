@@ -68,4 +68,4 @@ See [ROADMAP.md](ROADMAP.md) for planned revisions.
 
 ---
 
-*Last updated: 2026-07-12*
+*Last updated: 2026-07-21*
